@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 生日快樂 ✨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(135deg, #f0e1ff, #ccffff);
+      background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVsdjY3YWU0ZjJycXI2a3g1MmNtNXhybGdsaGkyYjJhMThxbG5lcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/RN29mOuLWPWxIZ7zzZ/giphy.gif');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #ff33cc;
+      text-align: center;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { text-shadow: 2px 2px #00ffff, -2px -2px #ff66ff; }
+      100% { text-shadow: 0 0 5px #ff00cc, 0 0 10px #00ffff; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 800px;
+      border: 4px dashed #ff99ff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ffccff;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
+
+    .message {
+      font-size: 1em;
+      white-space: pre-line;
+      margin: 1.5em 0;
+      color: #9900ff;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 2em;
+    }
+
+    .gallery img {
+      width: 200px;
+      border: 3px dotted #ff66cc;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ff99ff;
+    }
+
+    .footer {
+      font-size: 0.9em;
+      margin-top: 2em;
+      color: #9900ff;
+    }
+
+    .gift-box {
+      margin-top: 2em;
+    }
+
+    .gift-button {
+      font-size: 1em;
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: 2px solid #ff66cc;
+      background-color: #fff0f8;
+      color: #ff33aa;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .gift-button:hover {
+      background-color: #ffe6f0;
+    }
+
+    .surprise {
+      margin-top: 1em;
+      font-size: 1.2em;
+      color: #cc00cc;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.2em;
+      }
+
+      .message {
+        font-size: 0.85em;
+        padding: 0 10px;
+      }
+
+      .gallery img {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+  </style>
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise-text").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉💖 白球，生日快樂！💖🎉</h1>
+
+    <div class="message">
+      親愛的 白球：
+
+      祝福你天天開心，熊滿
+      愛情閃耀，閃閃發光
+      新的一歲夢想成真，再一起出國玩
+
+      —— 來自 蘿蔔糕
+    </div>
+
+    <div class="gallery">
+      <img src="https://i.imgur.com/fvS4DB8.jpg" alt="東京淺草寺 帶面具">
+      <img src="https://i.imgur.com/R5TWdDn.jpg" alt="楓葉之旅 大合照">
+      <img src="https://i.imgur.com/CuNxyyo.jpg" alt="Trick or Treat 早餐歡樂時光">
+    </div>
+
+    <div class="gift-box">
+      <button class="gift-button" onclick="showSurprise()">🎁 點我打開禮物盒 🎁</button>
+      <div id="surprise-text" class="surprise">👕 Bearbun 衣服任選一件！</div>
+    </div>
+
+    <div class="footer">
+      ✧･ﾟ: * 網頁由愛與懷舊風格閃閃打造 *:･ﾟ✧
+    </div>
+  </div>
+</body>
+</html>
